@@ -1,34 +1,10 @@
 import { useState, useEffect } from "react";
 
-//component
+//components
 import Loading from "./Loading";
 
-interface Holidays {
-  date: string;
-  federal: number;
-  id: number;
-  nameEn: string;
-  nameFr: string;
-  observedDate: string;
-}
-
-interface Province {
-  holidays: Holidays[];
-  id: string;
-  nameEn: string;
-  nameFr: string;
-  nextHoliday: {
-    date: string;
-    federal: number;
-    id: number;
-    nameEn: string;
-    nameFr: string;
-    observedDate: string;
-  };
-  sourceEn: string;
-  sourceLink: string;
-}
-const array: Province[] = [];
+//interfaces
+import { array } from "../interfaces/Interface";
 
 const Api = () => {
   const [provData, setProvData] = useState(array);
