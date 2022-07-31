@@ -100,9 +100,24 @@ const Api = () => {
                     {card.holidays.map((holiday) => {
                       return (
                         <div key={holiday.id}>
-                          <Typography>
-                            {holiday.date.slice(-5)}: {holiday.nameEn}
-                          </Typography>
+                          {holiday.date === card.nextHoliday.date ? (
+                            <Typography
+                              variant="subtitle2"
+                              gutterBottom
+                              component="div"
+                              color="primary"
+                            >
+                              {holiday.date.slice(-5)}: {holiday.nameEn}
+                            </Typography>
+                          ) : (
+                            <Typography
+                              variant="caption"
+                              display="block"
+                              gutterBottom
+                            >
+                              {holiday.date.slice(-5)}: {holiday.nameEn}
+                            </Typography>
+                          )}
                         </div>
                       );
                     })}
