@@ -1,5 +1,26 @@
 import { useState, useEffect } from "react";
 
+//MUI
+import AppBar from "@mui/material/AppBar";
+import Button from "@mui/material/Button";
+
+import Card from "@mui/material/Card";
+import CardHeader from "@mui/material/CardHeader";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import SourceIcon from "@mui/icons-material/Source";
+import IconButton from "@mui/material/IconButton";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 //components
 import Loading from "./Loading";
 
@@ -51,7 +72,7 @@ const Api = () => {
 
   return (
     <div>
-      {provData.map((province) => {
+      {/* {provData.map((province) => {
         return (
           <div key={province.id}>
             <h1>{province.nameEn}</h1>
@@ -66,7 +87,48 @@ const Api = () => {
             })}
           </div>
         );
-      })}
+      })} */}
+      <Container sx={{ py: 8 }} maxWidth="md">
+        <Grid container spacing={4}>
+          {provData.map((card) => (
+            <Grid item key={card.id} xs={12} sm={6} md={4}>
+              <Card
+                // variant="outlined"
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardHeader
+                  title={card.nameEn}
+                  subheader={card.id}
+                  action={
+                    <a href={card.sourceLink} target="_blank">
+                      <IconButton color="primary" component="label">
+                        <SourceIcon />
+                      </IconButton>
+                    </a>
+                  }
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {card.holidays.map((holiday) => {
+                      return (
+                        <div key={holiday.id}>
+                          <Typography>
+                            {holiday.date.slice(-5)}: {holiday.nameEn}
+                          </Typography>
+                        </div>
+                      );
+                    })}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </div>
   );
 };
