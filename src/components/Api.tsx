@@ -1,6 +1,38 @@
 import { useState, useEffect } from "react";
 
+//component
+import Loading from "./Loading";
+
+interface Holidays {
+  date: string;
+  federal: number;
+  id: number;
+  nameEn: string;
+  nameFr: string;
+  observedDate: string;
+}
+
+interface Province {
+  holidays: Holidays[];
+  id: string;
+  nameEn: string;
+  nameFr: string;
+  nextHoliday: {
+    date: string;
+    federal: number;
+    id: number;
+    nameEn: string;
+    nameFr: string;
+    observedDate: string;
+  };
+  sourceEn: string;
+  sourceLink: string;
+}
+const array: Province[] = [];
+
 const Api = () => {
+  const [provData, setProvData] = useState(array);
+  const [loading, setLoading] = useState(true);
   const getResponse = async () => {
     const response = await fetch(
       "https://canada-holidays.p.rapidapi.com/api/v1/provinces?optional=false&year=2022",
@@ -13,18 +45,54 @@ const Api = () => {
         },
       }
     );
-    if (!response.ok) {
+    setLoading(true);
+    try {
+      const data = await response.json();
+      const { provinces } = data;
+      setProvData(provinces);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const data = await response.json();
-    console.log(data);
   };
 
   useEffect(() => {
     getResponse();
   }, []);
 
-  return <div>Api</div>;
+  if (loading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    );
+  }
+
+  {
+    console.log(provData);
+  }
+
+  return (
+    <div>
+      {provData.map((province) => {
+        return (
+          <div key={province.id}>
+            <h1>{province.nameEn}</h1>
+
+            {province.holidays.map((holiday) => {
+              return (
+                <div key={holiday.id}>
+                  <h3>{holiday.date}</h3>
+                  <p>{holiday.nameEn}</p>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Api;
