@@ -85,8 +85,16 @@ const Api = () => {
                 }}
               >
                 <CardHeader
-                  title={card.nameEn}
-                  subheader={card.id}
+                  title={
+                    <Typography variant="h6" component="div">
+                      {card.nameEn}
+                    </Typography>
+                  }
+                  subheader={
+                    <Typography variant="caption" display="block">
+                      <i>{card.holidays.length} holidays</i>
+                    </Typography>
+                  }
                   action={
                     <a href={card.sourceLink} target="_blank">
                       <IconButton color="primary" component="label">
