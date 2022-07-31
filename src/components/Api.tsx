@@ -72,26 +72,10 @@ const Api = () => {
 
   return (
     <div>
-      {/* {provData.map((province) => {
-        return (
-          <div key={province.id}>
-            <h1>{province.nameEn}</h1>
-
-            {province.holidays.map((holiday) => {
-              return (
-                <div key={holiday.id}>
-                  <h3>{holiday.date}</h3>
-                  <p>{holiday.nameEn}</p>
-                </div>
-              );
-            })}
-          </div>
-        );
-      })} */}
-      <Container sx={{ py: 8 }} maxWidth="md">
+      <Container sx={{ py: 8 }} maxWidth="xl">
         <Grid container spacing={4}>
           {provData.map((card) => (
-            <Grid item key={card.id} xs={12} sm={6} md={4}>
+            <Grid item key={card.id} xs={12} sm={6} md={3}>
               <Card
                 // variant="outlined"
                 sx={{
