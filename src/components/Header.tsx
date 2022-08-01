@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 
-const Heading = () => {
+const Header = () => {
   return (
     <div className="header">
       <Typography gutterBottom variant="h5" align="center">
@@ -10,4 +10,4 @@ const Heading = () => {
   );
 };
 
-export default Heading;
+export default Header;

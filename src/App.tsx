@@ -1,10 +1,10 @@
 import Api from "./components/Api";
-import Heading from "./components/Heading";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <Heading />
+      <Header />
       <Api />
     </div>
   );
