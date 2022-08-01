@@ -18,62 +18,76 @@ const ProvinceWiseHolidays = ({ provData }: AppProps) => {
         <Grid container spacing={4}>
           {provData.map((card) => (
             <Grid item key={card.id} xs={12} sm={6} md={3}>
-              <Card
-                // variant="outlined"
-                sx={{
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <CardHeader
-                  title={
-                    <Typography variant="h6" component="div">
-                      {card.nameEn}
+              <div className="card">
+                <Card
+                  // variant="outlined"
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <CardHeader
+                    title={
+                      <Typography variant="h6" component="div">
+                        <span className="secondary-font">{card.nameEn}</span>
+                      </Typography>
+                    }
+                    subheader={
+                      <Typography variant="caption" display="block">
+                        <span className="secondary-font">
+                          {" "}
+                          <i>{card.holidays.length} holidays</i>
+                        </span>
+                      </Typography>
+                    }
+                    action={
+                      <a
+                        href={card.sourceLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <IconButton color="primary" component="label">
+                          <SourceIcon />
+                        </IconButton>
+                      </a>
+                    }
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {card.holidays.map((holiday) => {
+                        return (
+                          <div key={holiday.id}>
+                            {holiday.date === card.nextHoliday.date ? (
+                              <Typography
+                                variant="subtitle2"
+                                gutterBottom
+                                component="div"
+                                color="primary"
+                              >
+                                <span className="secondary-font">
+                                  {holiday.date.slice(-5)}: {holiday.nameEn}
+                                </span>
+                              </Typography>
+                            ) : (
+                              <Typography
+                                variant="caption"
+                                display="block"
+                                gutterBottom
+                              >
+                                <span className="secondary-font">
+                                  {" "}
+                                  {holiday.date.slice(-5)}: {holiday.nameEn}
+                                </span>
+                              </Typography>
+                            )}
+                          </div>
+                        );
+                      })}
                     </Typography>
-                  }
-                  subheader={
-                    <Typography variant="caption" display="block">
-                      <i>{card.holidays.length} holidays</i>
-                    </Typography>
-                  }
-                  action={
-                    <a href={card.sourceLink} target="_blank" rel="noreferrer">
-                      <IconButton color="primary" component="label">
-                        <SourceIcon />
-                      </IconButton>
-                    </a>
-                  }
-                />
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {card.holidays.map((holiday) => {
-                      return (
-                        <div key={holiday.id}>
-                          {holiday.date === card.nextHoliday.date ? (
-                            <Typography
-                              variant="subtitle2"
-                              gutterBottom
-                              component="div"
-                              color="primary"
-                            >
-                              {holiday.date.slice(-5)}: {holiday.nameEn}
-                            </Typography>
-                          ) : (
-                            <Typography
-                              variant="caption"
-                              display="block"
-                              gutterBottom
-                            >
-                              {holiday.date.slice(-5)}: {holiday.nameEn}
-                            </Typography>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </Typography>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </div>
             </Grid>
           ))}
         </Grid>

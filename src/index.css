@@ -1,12 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+:root {
+  --mainFont: "Josefin Sans", sans-serif;
+  --secondatyFont: "Dancing Script", cursive;
+  --darkColor: #eb2d37;
+  --midColor: #b22222;
+  --lightColor: #ffffff;
+  --cardShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --cardHoverShadow: 5px 10px 18px var(--midColor);
+  --transition: 0.3s ease-in-out all;
+}
+
+body {
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  font-family: var(--secondatyFont);
+}
 a,
 u {
   text-decoration: none;
 }
+.main-font {
+  font-family: var(--mainFont);
+}
+.secondary-font {
+  font-family: var(--secondatyFont);
+}
 .header {
   margin-top: 10px;
+  font-size: 1.8rem;
+  font-family: var(--mainFont);
 }
 .circular-progress {
   text-align: center;
   padding: 20px;
   margin-top: 50px;
+}
+.card {
+  height: "100%";
+  display: "flex";
+  flex-direction: "column";
+  transition: var(--transition);
+  box-shadow: var(--cardShadow);
+}
+.card:hover {
+  box-shadow: var(--cardHoverShadow);
+  transform: translate(0, -10px);
+}
+.card:active {
+  transform: scale(1.01) translateY(0.2rem);
+}
+
+.card-text-background {
+  background-color: var(--lightColor);
+  color: var(--darkColor);
+}
+.love {
+  vertical-align: text-top;
 }

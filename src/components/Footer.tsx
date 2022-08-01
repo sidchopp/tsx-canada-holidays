@@ -1,5 +1,6 @@
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 function Footer() {
   return (
@@ -10,11 +11,14 @@ function Footer() {
           align="center"
           component="p"
           gutterBottom
-          color="text.secondary"
         >
-          <span className="main-font">
+          <span className="secondary-font">
             {" "}
-            Made with ❤️ &{" "}
+            Made with{" "}
+            <span className="love">
+              <FavoriteIcon fontSize="small" />
+            </span>{" "}
+            &{" "}
             <a
               href="https://www.typescriptlang.org/"
               target="_blank"
@@ -24,8 +28,8 @@ function Footer() {
             </a>
           </span>
         </Typography>
-        <Typography variant="body2" color="text.secondary" align="center">
-          <span className="main-font">
+        <Typography variant="body2" align="center">
+          <span className="secondary-font">
             {" "}
             {"Copyright © "}
             {new Date().getFullYear()}

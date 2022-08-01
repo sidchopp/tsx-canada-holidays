@@ -2,9 +2,12 @@ import Typography from "@mui/material/Typography";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div>
       <Typography gutterBottom variant="h5" align="center">
-        Canadian Public and Federal Holidays for all 13 provinces
+        <span className="secondary-font">
+          {" "}
+          Canadian Public and Federal Holidays for all 13 provinces
+        </span>
       </Typography>
     </div>
   );
