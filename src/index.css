@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
 :root {
-  --mainFont: "Josefin Sans", sans-serif;
   --secondatyFont: "Dancing Script", cursive;
   --darkColor: #eb2d37;
   --midColor: #b22222;
@@ -81,7 +79,8 @@ u {
   color: var(--darkColor);
 }
 .language-button {
-  font-size: 0.9rem;
+  font-family: var(--secondatyFont);
+  font-size: 1.2rem;
   color: var(--darkColor);
 }
 .love {
