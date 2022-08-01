@@ -36,6 +36,10 @@ u {
 .canadian {
   font-size: 2.5rem;
 }
+.leaf {
+  vertical-align: text-top;
+  padding: 6px;
+}
 .province-name {
   font-size: 1.8rem;
   font-family: var(--secondatyFont);
