@@ -80,7 +80,10 @@ u {
 .source-button {
   color: var(--darkColor);
 }
-
+.language-button {
+  font-size: 0.9rem;
+  color: var(--darkColor);
+}
 .love {
   vertical-align: text-top;
 }
