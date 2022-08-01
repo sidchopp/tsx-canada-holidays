@@ -4,9 +4,10 @@ const Header = () => {
   return (
     <div>
       <Typography gutterBottom variant="h5" align="center">
-        <span className="secondary-font">
+        <span className="header">
           {" "}
-          Canadian Public and Federal Holidays for all 13 provinces
+          <span className="canadian">Canadian</span> Public and Federal Holidays
+          for all Provinces
         </span>
       </Typography>
     </div>

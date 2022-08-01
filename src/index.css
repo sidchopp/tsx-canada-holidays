@@ -27,15 +27,37 @@ u {
 .secondary-font {
   font-family: var(--secondatyFont);
 }
+
 .header {
   margin-top: 10px;
+  font-size: 1.95rem;
+  font-family: var(--secondatyFont);
+}
+.canadian {
+  font-size: 2.5rem;
+}
+.province-name {
   font-size: 1.8rem;
-  font-family: var(--mainFont);
+  font-family: var(--secondatyFont);
+}
+.holidays-number {
+  font-size: 1.25rem;
+  font-family: var(--secondatyFont);
+}
+.next-holiday {
+  font-size: 1.2rem;
+  color: var(--darkColor);
+  font-family: var(--secondatyFont);
+}
+.holidays {
+  font-size: 1.1rem;
+  font-family: var(--secondatyFont);
 }
 .circular-progress {
   text-align: center;
   padding: 20px;
   margin-top: 50px;
+  font-family: var(--secondatyFont);
 }
 .card {
   height: "100%";
@@ -51,11 +73,14 @@ u {
 .card:active {
   transform: scale(1.01) translateY(0.2rem);
 }
-
-.card-text-background {
-  background-color: var(--lightColor);
+.source-button {
   color: var(--darkColor);
 }
+
 .love {
   vertical-align: text-top;
+}
+.footer {
+  font-size: 1.3rem;
+  font-family: var(--secondatyFont);
 }

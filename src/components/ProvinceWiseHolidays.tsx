@@ -19,23 +19,20 @@ const ProvinceWiseHolidays = ({ provData }: AppProps) => {
           {provData.map((card) => (
             <Grid item key={card.id} xs={12} sm={6} md={3}>
               <div className="card">
-                <Card
-                  // variant="outlined"
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
+                <Card>
                   <CardHeader
                     title={
                       <Typography variant="h6" component="div">
-                        <span className="secondary-font">{card.nameEn}</span>
+                        <span className=" province-name">{card.nameEn}</span>
                       </Typography>
                     }
                     subheader={
-                      <Typography variant="caption" display="block">
-                        <span className="secondary-font">
+                      <Typography
+                        variant="caption"
+                        display="block"
+                        color="text.secondary"
+                      >
+                        <span className=" holidays-number">
                           {" "}
                           <i>{card.holidays.length} holidays</i>
                         </span>
@@ -47,8 +44,11 @@ const ProvinceWiseHolidays = ({ provData }: AppProps) => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <IconButton color="primary" component="label">
-                          <SourceIcon />
+                        <IconButton component="label">
+                          <span className="source-button">
+                            {" "}
+                            <SourceIcon />
+                          </span>
                         </IconButton>
                       </a>
                     }
@@ -65,7 +65,7 @@ const ProvinceWiseHolidays = ({ provData }: AppProps) => {
                                 component="div"
                                 color="primary"
                               >
-                                <span className="secondary-font">
+                                <span className=" next-holiday">
                                   {holiday.date.slice(-5)}: {holiday.nameEn}
                                 </span>
                               </Typography>
@@ -75,7 +75,7 @@ const ProvinceWiseHolidays = ({ provData }: AppProps) => {
                                 display="block"
                                 gutterBottom
                               >
-                                <span className="secondary-font">
+                                <span className="holidays">
                                   {" "}
                                   {holiday.date.slice(-5)}: {holiday.nameEn}
                                 </span>

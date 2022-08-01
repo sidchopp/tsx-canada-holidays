@@ -12,7 +12,7 @@ function Footer() {
           component="p"
           gutterBottom
         >
-          <span className="secondary-font">
+          <span className="footer">
             {" "}
             Made with{" "}
             <span className="love">
@@ -24,12 +24,12 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="heading-info"> TypeScript </span>
+              TypeScript
             </a>
           </span>
         </Typography>
         <Typography variant="body2" align="center">
-          <span className="secondary-font">
+          <span className=" footer">
             {" "}
             {"Copyright © "}
             {new Date().getFullYear()}
@@ -39,7 +39,7 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="heading-info"> My Other Projects</span>
+              My Other Projects
             </a>
           </span>
         </Typography>
