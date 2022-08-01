@@ -88,6 +88,10 @@ u {
   vertical-align: text-top;
 }
 .footer {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
+  font-family: var(--secondatyFont);
+}
+.footer-last {
+  font-size: 0.85rem;
   font-family: var(--secondatyFont);
 }

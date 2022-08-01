@@ -29,7 +29,7 @@ function Footer() {
           </span>
         </Typography>
         <Typography variant="body2" align="center">
-          <span className=" footer">
+          <span className=" footer-last">
             {" "}
             {"Copyright © "}
             {new Date().getFullYear()}
