@@ -23,4 +23,8 @@ interface Province {
   sourceEn: string;
   sourceLink: string;
 }
+
+export interface AppProps {
+  provData: Province[];
+}
 export const array: Province[] = [];
