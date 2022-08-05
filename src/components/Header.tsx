@@ -3,16 +3,18 @@ import { FaCanadianMapleLeaf } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <Typography gutterBottom variant="h5" align="center">
-      <span className="header">
-        {" "}
-        <span className="leaf">
+    <div className="header-container">
+      <Typography gutterBottom variant="h5" component="div" align="center">
+        <div className="header">
           {" "}
-          <FaCanadianMapleLeaf />
-        </span>
-        Holidays {new Date().getFullYear()}
-      </span>
-    </Typography>
+          <span className="leaf">
+            {" "}
+            <FaCanadianMapleLeaf />
+          </span>
+          Holidays {new Date().getFullYear()}
+        </div>
+      </Typography>
+    </div>
   );
 };
 
