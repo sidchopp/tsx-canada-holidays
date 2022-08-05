@@ -12,7 +12,7 @@ const Api = () => {
   const [loading, setLoading] = useState(true);
   const getResponse = async () => {
     const response = await fetch(
-      "https://canada-holidays.p.rapidapi.com/api/v1/provinces?optional=false&year=2022",
+      `https://canada-holidays.p.rapidapi.com/api/v1/provinces?optional=false&year= ${new Date().getFullYear()}`,
       {
         method: "GET",
         headers: {

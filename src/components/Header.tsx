@@ -12,9 +12,8 @@ const Header = () => {
               {" "}
               <FaCanadianMapleLeaf />
             </span>
-            Canadian{" "}
           </span>
-          Public and Federal Holidays for all Provinces
+          Public and Federal Holidays {new Date().getFullYear()}
         </span>
       </Typography>
     </div>
