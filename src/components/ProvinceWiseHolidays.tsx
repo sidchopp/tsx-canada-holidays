@@ -24,7 +24,7 @@ const ProvinceWiseHolidays = ({ provData }: AppProps) => {
 
   return (
     <div>
-      <Container sx={{ py: 8 }} maxWidth="xl">
+      <Container sx={{ py: 5 }} maxWidth="xl">
         <Grid container spacing={4}>
           {provData.map((card) => (
             <Grid item key={card.id} xs={12} sm={6} md={3}>

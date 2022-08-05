@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
 :root {
-  --secondatyFont: "Dancing Script", cursive;
+  --mainFont: "Dancing Script", cursive;
   --darkColor: #eb2d37;
   --midColor: #b22222;
   --lightColor: #ffffff;
@@ -13,7 +13,7 @@
 body {
   background-color: var(--darkColor);
   color: var(--lightColor);
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
 a,
 u {
@@ -23,13 +23,15 @@ u {
   font-family: var(--mainFont);
 }
 .secondary-font {
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
-
+.header-container {
+  margin: 0, 20px, 0, 20px;
+}
 .header {
   margin-top: 10px;
   font-size: 1.95rem;
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
 .canadian {
   font-size: 2.5rem;
@@ -40,26 +42,26 @@ u {
 }
 .province-name {
   font-size: 1.8rem;
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
 .holidays-number {
   font-size: 1.25rem;
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
 .next-holiday {
   font-size: 1.2rem;
   color: var(--darkColor);
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
 .holidays {
   font-size: 1.1rem;
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
 .circular-progress {
   text-align: center;
   padding: 20px;
   margin-top: 50px;
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
 .card {
   height: "100%";
@@ -79,7 +81,7 @@ u {
   color: var(--darkColor);
 }
 .language-button {
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
   font-size: 1.2rem;
   color: var(--darkColor);
 }
@@ -88,9 +90,9 @@ u {
 }
 .footer {
   font-size: 1.35rem;
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
 .footer-last {
   font-size: 0.85rem;
-  font-family: var(--secondatyFont);
+  font-family: var(--mainFont);
 }
