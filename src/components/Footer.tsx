@@ -13,7 +13,6 @@ function Footer() {
           gutterBottom
         >
           <span className="footer">
-            {" "}
             Made with{" "}
             <span className="love">
               <FavoriteIcon fontSize="small" />
@@ -30,7 +29,6 @@ function Footer() {
         </Typography>
         <Typography variant="body2" align="center">
           <span className=" footer-last">
-            {" "}
             {"Copyright © "}
             {new Date().getFullYear()}
             {"."}{" "}

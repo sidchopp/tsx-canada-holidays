@@ -6,9 +6,7 @@ const Header = () => {
     <div className="header-container">
       <Typography gutterBottom variant="h5" component="div" align="center">
         <div className="header">
-          {" "}
           <span className="leaf">
-            {" "}
             <FaCanadianMapleLeaf />
           </span>
           Holidays {new Date().getFullYear()}

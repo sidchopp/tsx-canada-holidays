@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
-
-//components
 import Loading from "./Loading";
 
-//interfaces
 import { array } from "../interfaces/Interface";
 import ProvinceWiseHolidays from "./ProvinceWiseHolidays";
 
