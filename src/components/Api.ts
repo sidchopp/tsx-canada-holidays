@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
-import Loading from "./Loading";
+import { Province, ApiData } from "../interfaces/Interface";
 
-import { array } from "../interfaces/Interface";
-import ProvinceWiseHolidays from "./ProvinceWiseHolidays";
-
-const Api = () => {
-  const [provData, setProvData] = useState(array);
+const Api = (): ApiData => {
+  const [provData, setProvData] = useState<Province[]>([]);
   const [loading, setLoading] = useState(true);
   const getResponse = async () => {
     const response = await fetch(
@@ -35,19 +32,7 @@ const Api = () => {
     getResponse();
   }, []);
 
-  if (loading) {
-    return (
-      <main>
-        <Loading />
-      </main>
-    );
-  }
-
-  return (
-    <div>
-      <ProvinceWiseHolidays provData={provData} />
-    </div>
-  );
+  return { loading, provData };
 };
 
 export default Api;

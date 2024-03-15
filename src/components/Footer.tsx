@@ -1,5 +1,4 @@
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import { Typography, Container } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 function Footer() {

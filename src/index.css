@@ -72,7 +72,7 @@ u {
 }
 .card:hover {
   box-shadow: var(--cardHoverShadow);
-  transform: translate(0, -10px);
+  /* transform: translate(0, -10px); */
 }
 .card:active {
   transform: scale(1.01) translateY(0.2rem);

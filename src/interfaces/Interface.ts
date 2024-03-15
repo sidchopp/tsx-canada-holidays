@@ -7,7 +7,7 @@ interface Holidays {
   observedDate: string;
 }
 
-interface Province {
+export interface Province {
   holidays: Holidays[];
   id: string;
   nameEn: string;
@@ -22,6 +22,11 @@ interface Province {
   };
   sourceEn: string;
   sourceLink: string;
+}
+
+export interface ApiData {
+  loading: boolean;
+  provData: Province[];
 }
 
 export interface AppProps {

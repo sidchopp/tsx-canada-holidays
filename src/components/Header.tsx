@@ -1,4 +1,4 @@
-import Typography from "@mui/material/Typography";
+import { Typography } from "@mui/material";
 import { FaCanadianMapleLeaf } from "react-icons/fa";
 
 const Header = () => {
