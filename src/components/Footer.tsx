@@ -1,5 +1,5 @@
 import { Typography, Container } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import { currentYear } from "../lib/utils";
 
 function Footer() {
   return (
@@ -12,25 +12,6 @@ function Footer() {
           gutterBottom
         >
           <span className="footer">
-            Made with{" "}
-            <span className="love">
-              <FavoriteIcon fontSize="small" />
-            </span>{" "}
-            &{" "}
-            <a
-              href="https://www.typescriptlang.org/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              TypeScript
-            </a>
-          </span>
-        </Typography>
-        <Typography variant="body2" align="center">
-          <span className=" footer-last">
-            {"Copyright © "}
-            {new Date().getFullYear()}
-            {"."}{" "}
             <a
               href="https://sid-projects.netlify.app/"
               target="_blank"
@@ -39,6 +20,9 @@ function Footer() {
               My Other Projects
             </a>
           </span>
+        </Typography>
+        <Typography variant="body2" align="center">
+          <span className=" footer-last">2022 - {currentYear()}</span>
         </Typography>
       </Container>
     </div>

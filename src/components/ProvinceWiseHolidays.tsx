@@ -5,14 +5,11 @@ import {
   Card,
   CardHeader,
   CardContent,
-  CardActions,
   Grid,
   Typography,
   Container,
   Button,
-  IconButton,
 } from "@mui/material";
-import SourceIcon from "@mui/icons-material/Source";
 
 const ProvinceWiseHolidays = ({ provData }: AppProps) => {
   const [english, setEnglish] = useState(true);
@@ -31,7 +28,7 @@ const ProvinceWiseHolidays = ({ provData }: AppProps) => {
               key={card.id}
               xs={12}
               sm={6}
-              md={3}
+              md={4}
               style={{ display: "flex" }}
             >
               <Card
@@ -109,15 +106,6 @@ const ProvinceWiseHolidays = ({ provData }: AppProps) => {
                     })}
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <a href={card.sourceLink} target="_blank" rel="noreferrer">
-                    <IconButton component="label">
-                      <span className="source-button">
-                        <SourceIcon />
-                      </span>
-                    </IconButton>
-                  </a>
-                </CardActions>
               </Card>
             </Grid>
           ))}

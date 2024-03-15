@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import { FaCanadianMapleLeaf } from "react-icons/fa";
+import { currentYear } from "../lib/utils";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
           <span className="leaf">
             <FaCanadianMapleLeaf />
           </span>
-          Holidays {new Date().getFullYear()}
+          Canadian Holidays {currentYear()}
         </div>
       </Typography>
     </div>
