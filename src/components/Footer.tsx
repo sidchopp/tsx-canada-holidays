@@ -13,7 +13,7 @@ function Footer() {
         >
           <span className="footer">
             <a
-              href="https://sid-projects.netlify.app/"
+              href="https://sid-chopra.netlify.app/"
               target="_blank"
               rel="noreferrer"
             >
