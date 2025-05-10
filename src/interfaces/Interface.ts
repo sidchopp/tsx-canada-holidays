@@ -31,5 +31,6 @@ export interface ApiData {
 
 export interface AppProps {
   provData: Province[];
+  english: boolean;
 }
 export const array: Province[] = [];
